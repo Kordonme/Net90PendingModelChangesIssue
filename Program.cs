@@ -49,6 +49,16 @@ else
     app.UseHsts();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var dbFactory = scope.ServiceProvider.GetRequiredService<IDbContextFactory<ApplicationDbContext>>();
+    using (var context = dbFactory.CreateDbContext())
+    {
+        // Apply any outstanding migrations
+        context.Database.Migrate();
+    }
+}
+
 app.UseHttpsRedirection();
 
 
