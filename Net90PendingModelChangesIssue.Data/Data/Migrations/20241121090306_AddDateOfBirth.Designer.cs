@@ -8,7 +8,7 @@ using Net90PendingModelChangesIssue.Data;
 
 #nullable disable
 
-namespace Net90PendingModelChangesIssue.Migrations
+namespace Net90PendingModelChangesIssue.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20241121090306_AddDateOfBirth")]

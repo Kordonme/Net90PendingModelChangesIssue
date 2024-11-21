@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Net90PendingModelChangesIssue.Migrations
+namespace Net90PendingModelChangesIssue.Data.Migrations
 {
     /// <inheritdoc />
     public partial class CreateIdentitySchema : Migration
